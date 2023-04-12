@@ -4,7 +4,9 @@ function getYearsPassed(year, month, day)
   local diff = os.difftime(today, other)
   DifferenceInYears = math.floor(diff / 60 / 60 / 24 / 365.25)
 
-  isNaN(other)
+  if diff < 0 then
+    error("Invalid date")
+  end
 
   if other > today then
     error("Invalid date")
@@ -65,6 +67,10 @@ function getDaysPassed(year, month, day)
     error("Invalid date")
   end
 
+  if other > today then
+    error("Invalid date")
+  end
+
   local februaryDays = isLeapYear(year) and 29 or 28
   local monthsDays = {
     ["January"] = 31,
@@ -84,7 +90,7 @@ function getDaysPassed(year, month, day)
   local totalDays = math.floor(diff / 86400)
   local monthNumber = tonumber(os.date("%m", other))
   local monthDays = monthsDays[os.date("%B", other)]
-  local days = totalDays - monthDays + day
+  local days = totalDays
 
   if days > monthDays then
     days = days - monthDays
@@ -92,7 +98,7 @@ function getDaysPassed(year, month, day)
     monthDays = monthsDays[os.date("%B", os.time { year = year, month = monthNumber, day = 1 })]
   end
 
-  days = math.min(days)
+  days = math.floor(days)
 
   return days
 end
@@ -108,21 +114,6 @@ function statementLeapYear(other, diff)
   end
 end
 
-function getDay(date)
-  local date = tonumber(os.date("%d"))
-  return date
-end
-
-function getMonth(date)
-  local date = tonumber(os.date("%m"))
-  return date
-end
-
-function getYear(date)
-  local date = tonumber(os.date("%y"))
-  return date
-end
-
 function getDaysInMonth(year, month)
   if month == 2 then
     return isLeapYear(year) and 29 or 28
@@ -131,4 +122,4 @@ function getDaysInMonth(year, month)
   end
 end
 
-print(getDaysPassed(2023, 04, 10))
+print(getMonthsPassed(2022, 10, 09))
