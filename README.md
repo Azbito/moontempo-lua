@@ -16,37 +16,23 @@
 <p>local moontempo = require ('path.to.init')</ṕ>
 <p>E.g: local a = require('libs.moontempo.init')</p>
 
-#
-
 ## Difference between years
-
-#
 
 <p>If you want to get the difference between <strong>years, </strong> you should run the function:</p>
 <p>print(moontempo.getYearsPassed(YYYY, MM, DD))</p>
 <p>print(moontempo.getYearsPassed(2004, 10, 09)) // returns 18 </p>
 
-#
-
 ## Difference between months
-
-#
 
 <p>If you want to get the difference between <strong>months,</strong> you should run the function:</p>
 <p>print(moontempo.getMonthsPassed(YYYY, MM, DD))</p>
 <p>print(moontempo.getMonthsPassed(2022, 10, 09)) // returns 6 </p>
 
-#
-
 ## Difference between days
-
-#
 
 <p>If you want to get the difference between <strong>days,</strong> you should run the function:</p>
 <p>print(moontempo.getDaysPassed(YYYY, MM, DD))</p>
 <p>print(moontempo.getDaysPassed(2022, 10, 09)) // returns 11 </p>
-
-#
 
 ## Leap year
 
@@ -69,37 +55,23 @@
 <p>local moontempo = require ('caminho.para.init')</ṕ>
 <p>E.g: local a = require('libs.moontempo.init')</p>
 
-#
-
 ## Diferença entre anos
-
-#
 
 <p>Se você quiser pegar a diferença entre <strong>anos, </strong> você deverá rodar esta função:</p>
 <p>print(moontempo.getYearsPassed(AAAA, MM, DD))</p>
 <p>print(moontempo.getYearsPassed(2004, 10, 09)) // retorna 18 </p>
 
-#
-
 ## Diferença entre meses
-
-#
 
 <p>Se você quiser pegar a diferença entre <strong>meses, </strong> você deverá rodar esta função:</p>
 <p>print(moontempo.getMonthsPassed(AAAA, MM, DD))</p>
 <p>print(moontempo.getMonthsPassed(2022, 10, 09)) // retorna 6 </p>
 
-#
-
 ## Diferença entre dias
-
-#
 
 <p>Se você quiser pegar a diferença entre <strong>dias, </strong> você deverá rodar esta função:</p>
 <p>print(moontempo.getDaysPassed(AAAA, MM, DD))</p>
 <p>print(moontempo.getDaysPassed(2022, 10, 09)) // retorna 11 </p>
-
-#
 
 ## Ano bisexto
 
@@ -122,39 +94,25 @@
 <p>local moontempo = require ('chemin.a.init')</ṕ>
 <p>E.g: local a = require('libs.moontempo.init')</p>
 
-#
-
 ## Faire la différence entre années
-
-#
 
 <p>Si vous souhaitez faire la différence entre <strong>années, </strong>vous devez exécuter cette fonction:</p> 
 <p>print(moontempo.getYearsPassed("AAAA-MM-JJ"))</p>
 <p>print(moontempo.getYearsPassed("2004-10-09")) // retourne 18 </p>
 
-#
-
 ## Faire la différence entre mois
-
-#
 
 <p>Si vous souhaitez faire la différence entre <strong>mois, </strong>vous devez exécuter cette fonction:</p>
 <p>print(moontempo.getMonthsPassed("AAAA-MM-JJ"))</p>
 <p>print(moontempo.getMonthsPassed("2022-10-09")) // retourne 6 </p>
   
-#
 ## Faire la différence entre jours
-#
 
 <p>Si vous souhaitez faire la différence entre <strong>jours, </strong>vous devez exécuter cette fonction:</p>
 <p>print(moontempo.getMonthsPassed("AAAA-MM-JJ"))</p>
 <p>print(moontempo.getMonthsPassed("2023-03-12")) // retourne 30 </p>
 
-#
-
 ## Année bissextile
-
-#
 
 <p>Pour savoir de ces information, vous devez exécuter cette fonction:</p>
 <p>print(moontempo.isLeapYear(2020)) // retourne true</p>

@@ -1,4 +1,4 @@
-package = "DateLua"
+package = "moontempo"
 version = "dev-1"
 source = {
    url = "git+https://github.com/Azbito/moontempo-lua.git"
