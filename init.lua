@@ -7,22 +7,15 @@ function moontempo.getYearsPassed(year, month, day)
   local today = os.time()
   local other = os.time { year = year, month = month, day = day }
   local diff = os.difftime(today, other)
-  DifferenceInYears = math.floor(diff / 60 / 60 / 24 / 365.25)
-
-  if diff < 0 then
-    error("Invalid date")
-  end
-
-  if other > today then
-    error("Invalid date")
-  end
+  local years = math.floor(diff / 60 / 60 / 24 / 365.25)
 
   if (moontempo.isLeapYear(other)) then
-    local years = math.floor(diff / 1000 / 60 / 60 / 24 / 366)
-    return years
+    local leapYears = math.floor(diff / 60 / 60 / 24 / 366)
+    leapYears = years
+    return leapYears
   end
 
-  return DifferenceInYears
+  return years
 end
 
 function moontempo.getMonthsPassed(year, month, day)
@@ -41,13 +34,7 @@ function moontempo.getDaysPassed(year, month, day)
   local other = os.time { year = year, month = month, day = day }
   local diff = os.difftime(today, other)
 
-  if diff < 0 then
-    error("Invalid date")
-  end
-
-  if other > today then
-    error("Invalid date")
-  end
+  moontempo.errorMessage(diff, other, today)
 
   local februaryDays = moontempo.isLeapYear(year) and 29 or 28
   local monthsDays = {
@@ -92,6 +79,16 @@ function moontempo.getDaysInMonth(year, month)
     return moontempo.isLeapYear(year) and 29 or 28
   else
     return ({ 31, nil, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 })[month]
+  end
+end
+
+function moontempo.errorMessage(a, b, c)
+  if a < 0 then
+    error("Invalid date")
+  end
+
+  if b > c then
+    error("Invalid date")
   end
 end
 
