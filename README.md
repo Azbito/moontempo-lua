@@ -64,8 +64,6 @@
 
 ## Instalação
 
-#
-
 <p>Antes de tudo, para adicionar a biblioteca em seu projeto, digite isto na seção de importações de bibliotecas:</p>
 
 <p>local moontempo = require ('caminho.para.init')</ṕ>
@@ -118,8 +116,6 @@
 # Comment utiliser:
 
 ## Installation
-
-#
 
 <p>Avant tout, si vous souhaitez d'utiliser cette bibliothèque dans votre projet, vous devez digiter dans la section d'importation de bibliothèques:</p>
 
